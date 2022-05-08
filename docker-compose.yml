@@ -1,0 +1,54 @@
+version: '3.1'
+
+networks:
+  skynet:
+
+services:
+
+  pgdb:
+    image: postgres
+    restart: always
+    networks:
+      - skynet
+    ports:
+      - "5432:5432"
+    environment:
+      - "POSTGRES_PASSWORD=qaninja"
+
+  pgadmin:
+    image: dpage/pgadmin4
+    networks:
+      - skynet
+    environment:
+      - "PGADMIN_DEFAULT_EMAIL=root@qaninja.io"
+      - "PGADMIN_DEFAULT_PASSWORD=qaninja"
+    ports:
+      - "15432:80"
+
+  nflix-user:
+     image: papitoio/nflix-api-users
+     networks:
+      - skynet
+     environment:
+      - "DATABASE=pgdb"
+     ports:
+      - "3001:3001"
+
+  nflix-movies:
+    image: papitoio/nflix-api-movies
+    networks:
+      - skynet
+    environment:
+      - "DATABASE=pgdb"
+    ports:
+      - "3002:3002"
+
+  nflix-gateway:
+    image: papitoio/nflix-api-gateway
+    networks:
+      - skynet
+    environment:
+      - "API_USERS=192.168.1.7:3001"
+      - "API_MOVIES=192.168.1.7:3002"
+    ports:
+      - "3000:3000"
