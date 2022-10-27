@@ -2,8 +2,8 @@ require "pg"
 
 class Database
     
-    def initialize
-        conn = { host: "192.168.1.7", dbname: "nflix", user: "postgres", password: "qaninja"}
+    def initialize(host = "192.168.1.7")
+        conn = { host: "#{host}", dbname: "nflix", user: "postgres", password: "qaninja"}
         @connection = PG.connect(conn)
     end
 
