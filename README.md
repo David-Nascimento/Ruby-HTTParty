@@ -1,12 +1,16 @@
 # Example
-Nflix é uma gem de testes criada pela QANinja para testes de automação Front e API
+Nflix é um projeto de testes criada pela QANinja para testes de automação de API
 
 ## Installation
 Versão minima do Ruby => 2.7.6
 
-Adicionar a linha no seu Gemfile
+Gems utilizadas no projeto
 ```
-gem 'nflix'
+gem 'httparty', '~> 0.20.0'
+gem 'rspec', '~> 3.12'
+gem 'pg'
+gem 'factory_bot', '~> 6.2', '>= 6.2.1'
+gem 'allure-rspec', '~> 2.15.0'
 ```
 
 E então execute:
@@ -23,3 +27,5 @@ Ou intale você mesmo:
     docker-compose up -d 
 ```
 
+# Report
+    $ AllureRepsec > report/allure-results

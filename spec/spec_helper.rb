@@ -2,6 +2,7 @@ require 'httparty'
 require 'httparty/request'
 require 'httparty/response/headers'
 require 'factory_bot'
+require 'allure-rspec'
 
 require_relative 'database'
 require_relative 'factories'
@@ -13,6 +14,12 @@ require_relative 'support'
 
 
 CONFIG = YAML.load_file("#{Dir.pwd}/spec/support/data/#{@ambiente}.yml")
+
+AllureRspec.configure do |c|
+  c.result_directory = 'report/allure-results'
+  c.clead_result_directory = true
+end
+
 
 RSpec.configure do |config|
  
