@@ -19,6 +19,7 @@ Ou intale você mesmo:
 
 ## Subir Containers para executar os testes
 ```docker
-    docker-compose up -d # vai executar o container no modo dettach
+# vai executar o container no modo dettach
+    docker-compose up -d 
 ```
 
