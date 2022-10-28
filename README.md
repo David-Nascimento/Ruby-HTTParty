@@ -17,10 +17,8 @@ Ou intale você mesmo:
 
     $ gem install nflix
 
-## Forma de utilizar
-```ruby
-    require 'nflix'
-
-    nflix.delete_user(email)
+## Subir Containers para executar os testes
+```docker
+    docker-compose up -d # vai executar o container no modo dettach
 ```
 
