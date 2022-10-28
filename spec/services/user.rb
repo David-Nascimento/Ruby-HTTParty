@@ -1,7 +1,7 @@
 
 class ApiUser
     include HTTParty
-    base_uri "http://192.168.1.7:3001"
+    base_uri "http://localhost:3001/"
     headers "Content-Type" => "application/json"
 
 
