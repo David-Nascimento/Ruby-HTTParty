@@ -22,6 +22,9 @@ Ou intale você mesmo:
     $ gem install nflix
 
 ## Subir Containers para executar os testes
+
+Pré-condição: Ter o Docker instaldo.
+
 ```docker
 # vai executar o container no modo dettach
     docker-compose up -d 
