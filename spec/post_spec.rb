@@ -24,7 +24,7 @@ describe "POST - Create User" do
         it { expect(result.parsed_response["msg"]).to eql "Validation notEmpty on email failed" }
     end
 
-    context "when Not Empty full name" do
+    context "when Not Emptyd full name" do
         let(:result) { ApiUser.save(build(:empty_full_name).to_hash) }
         it { expect(result.response.code).to eql "412" }
         it { expect(result.parsed_response["msg"]).to eql "Validation notEmpty on full_name failed" }

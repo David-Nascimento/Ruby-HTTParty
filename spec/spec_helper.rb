@@ -3,16 +3,9 @@ require 'httparty/request'
 require 'httparty/response/headers'
 require 'factory_bot'
 
-require_relative 'database'
+require_relative './utils/database'
 require_relative 'factories'
 require_relative 'services/user'
-require_relative 'support'
-
-@rspec_yaml = YAML.load_file("#{Dir.pwd}/spec/support/rspec.yaml")
-@ambiente = @rspec_yaml[ambiente]
-
-
-CONFIG = YAML.load_file("#{Dir.pwd}/spec/support/data/#{@ambiente}.yml")
 
 RSpec.configure do |config|
  

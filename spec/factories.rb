@@ -4,7 +4,7 @@ FactoryBot.define do
     factory :user, class: UserModel do
         full_name { "David Halison" }
         email { "david@teste.com" }
-       password { "david123" }
+        password { "david123" }
 
        after(:build) do |user|
         Database.new.delete_user(user.email)           
