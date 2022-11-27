@@ -1,5 +1,5 @@
 describe "get" do
-    context "when a registeres user" do
+    context "when a registeres user", :new_user do
         let(:user) { build(:registered_user) }
         let(:token) { ApiUser.token(user.email, user.password) }
         let(:result) { ApiUser.find(token, user.id) }
