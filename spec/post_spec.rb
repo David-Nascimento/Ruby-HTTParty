@@ -1,6 +1,6 @@
 
 
-describe "POST - Create User" do
+describe "Post" do
     context "New User" do
         let(:result) { ApiUser.save(build(:user).to_hash) }
         it { expect(result.response.code).to eql "200" }
