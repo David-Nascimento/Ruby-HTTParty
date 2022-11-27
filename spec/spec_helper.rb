@@ -4,7 +4,7 @@ require 'httparty/response/headers'
 require 'factory_bot'
 
 require_relative './utils/database'
-require_relative 'factories'
+require_relative 'utils/factories'
 require_relative 'services/user'
 
 RSpec.configure do |config|
@@ -20,4 +20,8 @@ RSpec.configure do |config|
 
   config.shared_context_metadata_behavior = :apply_to_host_groups
   config.include FactoryBot::Syntax::Methods
+
+  config.before :all do
+    Database.new.clean_db
+  end
 end

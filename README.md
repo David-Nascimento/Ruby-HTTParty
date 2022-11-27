@@ -1,25 +1,13 @@
-# Example
-Nflix é uma gem de testes criada pela QANinja para testes de automação Front e API
+# Sobre
+NFlix é um projeto particular criado pela QA Ninja e dipsonibilizado para estudos de automação de testes com diferentes
+stacks e frameworks.
 
 ## Installation
-Versão minima do Ruby => 2.7.6
+- Ruby 3.0.0
 
-Adicionar a linha no seu Gemfile
-```
-gem 'nflix'
-```
-
-E então execute:
-
-    $ bundle install
-
-Ou intale você mesmo:
-
-    $ gem install nflix
-
-## Subir Containers para executar os testes
-```docker
+## Docker Compose
+```sh
 # vai executar o container no modo dettach
-    docker-compose up -d 
+docker-compose up -d 
 ```
 
