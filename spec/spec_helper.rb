@@ -3,7 +3,7 @@ require 'httparty/request'
 require 'httparty/response/headers'
 require 'factory_bot'
 
-require_relative './utils/database'
+require_relative 'utils/database'
 require_relative 'utils/factories'
 require_relative 'services/user'
 
